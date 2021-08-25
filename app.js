@@ -19,7 +19,7 @@ const cors = require('cors');
 
 const app = express();
 app.enable('trust Proxy');
-app.use(cors());
+// app.use(cors());
 
 // app.options('*',cors());
 
