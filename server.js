@@ -26,6 +26,13 @@ process.on('unhandledRejection', (err) => {
   });
 });
 
+process.on('SIGTERM', () => {
+  console.log('Shutting down Gracefully');
+  server.close(() => {
+    console.log('🎇 process terminated');
+  });
+});
+
 // console.log(x);
 
 // Hello Vipul sir and Parita
